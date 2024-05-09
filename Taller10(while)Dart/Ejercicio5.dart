@@ -1,5 +1,0 @@
-/**
-5. Realizar un programa que permita cargar dos listas de 15 valores cada una. Informar con un
-mensaje cual de las dos listas tiene un valor acumulado mayor (mensajes “Lista 1 mayor”,
-“Lista 2 mayor”, “Listas iguales”)
- */

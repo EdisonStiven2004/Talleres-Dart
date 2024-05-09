@@ -35,6 +35,8 @@ void main() {
 si la divisa no está en el diccionario
 */
  
+import 'dart:io';
+
 void main() {
   // Definir el diccionario de divisas
   Map<String, String> divisas = {
@@ -45,7 +47,7 @@ void main() {
 
   // Pedir al usuario la divisa
   print('Ingrese una divisa (Euro, Dollar o Yen):');
-  String divisaUsuario = stdin.readLineSync();
+  String? divisaUsuario = stdin.readLineSync();
 
   // Verificar si la divisa está en el diccionario utilizando for-in
   bool divisaEncontrada = false;

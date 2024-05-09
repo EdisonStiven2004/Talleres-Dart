@@ -4,6 +4,7 @@ al usuario y mostrará su suma, volviendo a repetir hasta que ambos números int
 sean 0.
 .
  */
+/*
 import 'dart:io';
 
 void main() {
@@ -22,4 +23,16 @@ void main() {
   } while (numero1 != 0 || numero2 != 0);
 
   print('Ambos números introducidos son 0. ¡Fin del programa!');
+}
+*/
+
+import 'dart:io';
+void main(){
+  print("digite el primer numero");
+  int primerNumero = int.parse(stdin.readLineSync()!);
+
+  print("sigite el suegundo numero");
+  int segundoNumero = int.parse(stdin.readLineSync()!);
+  int suma = primerNumero + segundoNumero;
+   print("la suma de los numero es$primerNumero + $segundoNumero");
 }

@@ -6,11 +6,9 @@ español y utilizará el diccionario para traducirla palabra a palabra. Si una p
 está en el diccionario debe dejarla sin traducir.
 
  */
+/*
 import 'dart:io';
-
 void main() {
-  
-  
   // Crear un diccionario 
   Map<String, String> diccionario = {
     'amarillo': 'yelow',
@@ -20,11 +18,10 @@ void main() {
 
   };
 
-  
-
   // Pedir al usuario que ingrese una frase en español para traducir
   print('Ingrese una palbara en español que desea ingresar :');
   String clave = stdin.readLineSync().toString();
+
   print("ingrese la palbra en ingles que coresponde ");
   diccionario[clave] = stdin.readLineSync().toString();
 
@@ -34,10 +31,35 @@ void main() {
   diccionario.forEach((espanol, ingnles ) {
     if (diccionario[palabra]== diccionario[espanol]) {
       print("la tarduccion de $espanol es $ingnles");
+    }
+   });
+}
+*/
+
+import 'dart:io';
+void main(){  
+  Map<String,String> diccionario ={ 
+
+    'rojo':'red',
+    'perro':'Dog',
+    'hola':'hello',
+
+  };
+  print("digite palabara ");
+  String clave = stdin.readLineSync().toString() ;
+
+  print ("digite palabra en ingles");
+  diccionario[clave] = stdin.readLineSync().toString();
+
+  print("digite la palabra a traducir ");
+  String palabra = stdin.readLineSync().toString();
+  
+  diccionario.forEach((espanol, ingles) {
+    if (diccionario[palabra] == diccionario [espanol]) {
+      print("en español es español es $espanol  en ingles $ingles");
       
     }
 
-   });
 
-  
+   });
 }

@@ -1,5 +1,6 @@
 /*7. Visualizar el promedio de una serie de números decimales introducidos por teclado. Antes
 se deberá indicar la cantidad de números que van a intervenir en el cálculo del valor .*/
+
 import 'dart:io';
 
 void main() {
@@ -10,12 +11,12 @@ void main() {
   int contador = 0;
 
   while (contador < cantidadNumeros) {
-    print('Ingrese el número ${contador + 1}:');
+    print('Ingrese el numero ${contador + 1}:');
     double numero = double.parse(stdin.readLineSync()!);
     suma += numero;
     contador++;
   }
 
   double promedio = suma / cantidadNumeros;
-  print('El promedio de los $cantidadNumeros números es: $promedio');
+  print('El promedio de los  numeros $cantidadNumeros es: $promedio');
 }

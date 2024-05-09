@@ -5,22 +5,33 @@ Luego se deben imprimir todos los números pares que se encuentran entre ambos n
 import 'dart:io';
 
 void main() {
-  print('Ingrese la cantidad de piezas a procesar: ');
-  int cantidadPiezas = int.parse(stdin.readLineSync()!);
+  print('Ingrese el 1 numero posoitivo: ');
+  int primerNumero = int.parse(stdin.readLineSync()!);
 
-  int piezasAptas = 0;
-  int i = 1;
+print("Ingrese el 2 numero positivo ");
+int segundoNumero = int.parse(stdin.readLineSync()!);
 
-  while (i <= cantidadPiezas) {
-    print('Ingrese la longitud de la pieza $i: ');
-    double tamanoPiezas= double.parse(stdin.readLineSync()!);
+//validamos si los numero ingresados son positivos
+if (primerNumero <=0 || segundoNumero <= 0) {
+  print("los numero deben de ser positivos");
+  return;
+  
+}
+//el mayor y el menor entre los numeros
+int mayor = primerNumero > segundoNumero ? primerNumero : segundoNumero;
+int menor = primerNumero < segundoNumero ? primerNumero : segundoNumero;
 
-    if (tamanoPiezas>= 1.20 && tamanoPiezas<= 1.30) {
-      piezasAptas++;
-    }
-
-    i++;
+//imprimir lo numeros pares 
+print("los numero  entre el primer numero $primerNumero y el segundo numero $segundoNumero");
+//imprimir todos los numeros pares que se encuntren el primerNumero y el segundoNumero
+for (var i = menor; i <= mayor; i++) {
+  if (i % 2 == 0) {
+    print(i);
+    
   }
+  
+}
+  
 
-  print('Cantidad de piezas aptas: $piezasAptas');
+  
 }

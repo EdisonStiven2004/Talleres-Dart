@@ -12,7 +12,7 @@ void main() {
   int contador = 0;
 
   while (contador < cantidadPersonas) {
-    print('Ingrese la altura de la persona ${contador + 1}: ');
+    print('Ingrese la altura de la persona : ');
     double altura = double.parse(stdin.readLineSync()!);
     sumaAlturas += altura;
     contador++;
